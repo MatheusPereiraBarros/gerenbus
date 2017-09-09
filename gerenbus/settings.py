@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'empresa'
 ]
 
@@ -81,6 +82,12 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK ={
+        'DEFAULT_PERMISSION_CLASSES':[
+            'rest_framework.permissions.IsAdminUser',
+            ],
+        'PAGE_SIZE': 10
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
